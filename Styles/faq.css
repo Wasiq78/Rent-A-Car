@@ -1,0 +1,74 @@
+.faq .section-header p {
+    max-width: 70%;
+    margin-inline: auto;
+    margin-top: 0.8rem;
+}
+
+.faq {
+    background-image: url('/images/faq/car.png');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: 0 70%;
+}
+
+.question {
+    width: 60%;
+    margin-inline: auto;
+    background: #fff;
+    box-shadow: inset 0 -6px 9px rgba(0, 0, 0, 0.1);
+}
+
+.question:last-child {
+    box-shadow: none;
+}
+
+.question-title {
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 4.5rem;
+}
+
+.answer {
+    padding: 1.2rem 4.5rem;
+    color: var(--text-color);
+    display: none;
+}
+
+.question.active .question-title {
+    background: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 10px 15px 0 rgba(255, 83, 48, .55);
+
+}
+
+.question.active .answer {
+    display: block;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .question {
+        max-width: var(--container-width);
+        width: 100%;
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 650px){
+    .question-title, .answer{
+        padding-inline: 1.5rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .question-title {
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+
+    .rental .section-header p {
+        max-width: var(--container-width);
+    }
+}

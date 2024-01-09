@@ -1,0 +1,96 @@
+@import '/Styles/config.css';
+@import '/Styles/general.css';
+@import '/Styles/nav.css';
+@import '/Styles/Contact Styles/contact.css';
+@import '/Styles/About Styles/book.css';
+@import '/Styles/footer.css';
+@import '/Styles/About Styles/aboutFooter.css';
+
+
+
+.contact {
+    background-image: url('/images/banners/bg-contact.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 40% 50%;
+    gap: 10%;
+    max-width: 1200px;
+}
+
+.contact-left p {
+    margin-block: 2rem;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.contact-right form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.contact-right form label span {
+    color: var(--primary-color);
+}
+
+.contact-right form .form-group input,
+textarea {
+    width: 100%;
+    resize: none;
+    background: #dbdbdb;
+    border: none;
+    border-radius: 0;
+    padding: 1rem 1.3rem;
+    color: #555;
+}
+
+.contact-btn button {
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.contact-btn button i {
+    margin-right: 8px;
+}
+
+/* Media Queries */
+@media (max-width: 1270px) {
+    .contact-container {
+        max-width: var(--container-width);
+    }
+}
+
+@media (max-width: 850px){
+    .contact-container{
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    .contact-left{
+        text-align: center;
+    }
+
+    .contact-info{
+        align-items: center;
+    }
+}

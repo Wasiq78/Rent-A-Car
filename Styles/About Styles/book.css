@@ -1,0 +1,28 @@
+.book{
+    background-image: url('/images/banners/book-banner.png');
+    background-size: cover;
+}
+
+.book-content{
+    padding-block: 5rem;
+    color: #fff;
+    display: flex;
+    gap: 4rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.book-content h2:last-child{
+    color: var(--primary-color);
+}
+
+.book-content h2:last-child i{
+    margin-right: 1.1rem;
+}
+
+/* Media Queries */
+@media (max-width: 950px){
+    .book-content{
+        flex-direction: column;
+    }
+}

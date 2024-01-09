@@ -1,0 +1,110 @@
+@import '/Styles/config.css';
+@import '/Styles/general.css';
+@import '/Styles/nav.css';
+@import '/Styles/Vehicle Styles/vehicle.css';
+@import '/Styles/footer.css';
+@import '/Styles/About Styles/book.css';
+@import '/Styles/About Styles/aboutFooter.css';
+
+
+
+.vehicles-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5rem;
+    max-width: 1210px;
+    margin-inline: auto;
+}
+
+.vehicle{
+    border: 1px solid var(--text-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.vehicle-img img{
+   height: 16rem;
+   width: 100%;
+   object-fit: cover;
+}
+
+.vehicle:nth-child(4) .vehicle-img img{
+    height: 16rem;
+}
+
+.vehicle-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 1.5rem;
+    margin-top: 1rem;
+}
+
+.vehicle-content h3{
+    line-height: 1.2;
+}
+
+.vehicle-content .vehicle-rent{
+    text-align: center;
+}
+
+.vehicle-specifications{
+    max-width: 88%;
+    margin-inline: auto;
+}
+
+.vehicle-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.2rem;
+}
+
+.vehicle-group:last-child{
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--text-color);
+}
+
+.model,.doors,.transmission,.fuel{
+    display: flex;
+    gap: 1rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.book-btn{
+    padding-block: 1.3rem;
+    padding-inline: 1.5rem;
+}
+
+.book-btn .btn{
+    padding-block: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 1279px){
+    .vehicles-container{
+        grid-template-columns: repeat(2,1fr);
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 830px){
+    .vehicles-container{
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+
+    .vehicle:nth-child(4) .vehicle-img img{
+        height: 16rem;
+    }
+}
+
+@media (max-width: 450px){
+    .vehicles-container{
+        grid-template-columns: 1fr;
+        max-width: var(--container-width);
+    }
+}

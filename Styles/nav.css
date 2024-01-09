@@ -1,0 +1,99 @@
+nav{
+    height: 6rem;
+    position: fixed;
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: var(--transition);
+}
+
+.nav-scroll{
+    background: #fff;
+    box-shadow:  0 9px 9px rgba(0,0,0,0.5);
+}
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 9rem;
+}
+
+.menu, .buttons{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.menu li a,
+.buttons a{
+    color: var(--body-color);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.menu li a:hover,
+.buttons a:hover{
+    color: var(--primary-color);
+}
+
+.nav-buttons{
+    font-size: 1.2rem;
+    display: none;
+}
+
+/* Media Queries */
+@media (max-width: 1150px){
+    .buttons{
+        display: none;
+    }
+}
+
+@media (max-width: 900px){
+    .menu{
+        position: absolute;
+        top: 0;
+        left: -100%;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        overflow-x: hidden;
+        justify-content: center;
+        transform-origin: left;
+        z-index: 1;
+        animation: NavAnimation 500ms ease-in-out forwards;
+        display: none;
+    }
+
+    @keyframes NavAnimation {
+        to {
+           left: 0;
+        }
+    }
+
+    .menu li{
+        text-align: center;
+    }
+
+    .nav-buttons{
+        display: block;
+    }
+
+    .nav-buttons button{
+        font-size: 1.6rem;
+        background: transparent;
+    }
+
+    #nav-toggle-close{
+        display: none;
+        z-index: 2;
+        position: relative;
+    }
+}

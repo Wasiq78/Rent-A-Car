@@ -1,0 +1,50 @@
+.download{
+    background: #fff;
+    background-image: url('/images/banners/bg02.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+
+.download-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5rem;
+}
+
+.download-left{
+    padding-block: 6rem;
+    padding-left: 2rem;
+}
+
+.download-left h1{
+    line-height: 1.2;
+}
+
+.download-left p{
+    margin-block: 1.4rem;
+}
+
+.download-img{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.download-img img{
+    width: 14rem;
+}
+
+/* Media Queries */
+@media (max-width:500px){
+    .download-container{
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+
+    .download-img{
+        flex-direction: column;
+        align-items: center;
+    }
+}

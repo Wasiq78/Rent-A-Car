@@ -1,0 +1,53 @@
+@import '/Styles/config.css';
+@import '/Styles/general.css';
+@import '/Styles/nav.css';
+@import '/Styles/Team Styles/team.css';
+@import '/Styles/About Styles/book.css';
+@import '/Styles/footer.css';
+@import '/Styles/About Styles/aboutFooter.css';
+
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    max-width: 1050px;
+}
+
+.member-img {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+}
+
+.member-info {
+    background: #fff;
+    padding-block: 1.3rem;
+    text-align: center;
+    box-shadow: 0 14px 14px rgba(0, 0, 0, 0.2);
+}
+
+.member-info p {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+/* Media Queires */
+@media (max-width: 1130px) {
+    .team-container {
+        max-width: var(--container-width);
+    }
+}
+
+@media (max-width: 900px) {
+    .team-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .team-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}

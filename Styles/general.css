@@ -1,0 +1,124 @@
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin-inline: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 0.6rem;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 20px;
+}
+
+section {
+    padding-block: 6rem;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: var(--second-font);
+}
+
+h1 {
+    font-size: var(--h1-font-size);
+}
+
+h2 {
+    font-size: var(--h2-font-size);
+}
+
+h3 {
+    font-size: var(--h3-font-size);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1.2rem 2.5rem;
+    background: var(--primary-color);
+    color: var(--color);
+    font-weight: 700;
+    border-radius: 3px;
+    box-shadow: 0 10px 15px 0 rgba(255, 83, 48, .35);
+    transition: var(--transition);
+}
+
+.btn:hover {
+    box-shadow: 0 10px 15px 0 rgba(255, 83, 48, .55);
+}
+
+.btn.primary {
+    background: #010103;
+    border: 2px solid #010103;
+    box-shadow: none;
+    transition: var(--transition);
+}
+
+.btn.primary:hover {
+    background: transparent;
+    color: #010103;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--body-color);
+    border-radius: 3px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.hero {
+    width: 100%;
+    height: 55vh;
+    top: 0;
+    left: 0;
+    position: relative;
+    background-image: url("/images/hero/heroes-bg.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.92);
+    height: 55vh;
+    width: 100%;
+}
+
+.hero .container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.text{
+    margin-top: 4rem;
+}
