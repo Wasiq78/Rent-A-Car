@@ -128,6 +128,11 @@
 
 /* Media Queries */
 @media (max-width:1192px){
+
+    header{
+        padding-top: 4rem;
+    } 
+
     .header-container{
         height: 90vh;
         margin-top: 0;
@@ -184,10 +189,18 @@
     .header-btns{
         flex-direction: column;
     }
+
+    header{
+        padding-top: 6rem;
+    }
 }
 
 @media (max-width: 350px){
     .header-left h1{
         font-size: var(--h2-font-size);
+    }
+
+    header{
+        padding-top: 4rem;
     }
 }
